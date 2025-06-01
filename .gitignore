@@ -17,3 +17,4 @@ clover.xml
 # 其他
 .DS_Store
 Thumbs.db
+/coverage.xml
