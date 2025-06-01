@@ -4,6 +4,14 @@
 
 本项目遵循 [语义化版本控制](https://semver.org/lang/zh-CN/)。
 
+## [1.0.5] - 2025-06-15
+
+### 文档
+
+- 更新贡献指南，添加详细的分支管理策略
+- 创建GitHub Issue和PR模板
+- 添加贡献部分到README文件
+
 ## [1.0.4] - 2025-06-01
 
 ### 增强
@@ -46,6 +54,7 @@
 - 添加 `parseController()` 方法解析控制器路径
 - 添加示例文件和单元测试
 
+[1.0.5]: https://github.com/delay-no-more/thinkphp-mac-parser/releases/tag/v1.0.5
 [1.0.4]: https://github.com/delay-no-more/thinkphp-mac-parser/releases/tag/v1.0.4
 [1.0.3]: https://github.com/delay-no-more/thinkphp-mac-parser/releases/tag/v1.0.3
 [1.0.2]: https://github.com/delay-no-more/thinkphp-mac-parser/releases/tag/v1.0.2
