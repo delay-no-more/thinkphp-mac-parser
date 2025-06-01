@@ -7,6 +7,10 @@ codecov:
   notify:
     after_n_builds: 1
     wait_for_ci: yes
+  retry:
+    count: 5
+    delay: 10
+    max_delay: 60
 
 coverage:
   precision: 2
