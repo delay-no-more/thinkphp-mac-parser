@@ -1,5 +1,12 @@
 codecov:
   require_ci_to_pass: yes
+  max_report_age: 24h
+  strict_yaml_branch: master
+  url: "https://codecov.io"
+  token: CODECOV_TOKEN
+  notify:
+    after_n_builds: 1
+    wait_for_ci: yes
 
 coverage:
   precision: 2
