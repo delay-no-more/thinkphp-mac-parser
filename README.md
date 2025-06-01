@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" alt="ThinkPHP MAC Parser Logo" width="300"/>
+  <img src=".github/assets/logo.png" alt="ThinkPHP MAC Parser Logo" width="300"/>
 </p>
 
 <h1 align="center">ThinkPHP MAC Parser</h1>
