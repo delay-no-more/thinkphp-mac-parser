@@ -4,6 +4,20 @@
 
 本项目遵循 [语义化版本控制](https://semver.org/lang/zh-CN/)。
 
+## [1.0.6] - 2025-06-15
+
+### 新增
+
+- 添加实际解析结果的JSON输出示例，提高文档直观性
+- 新增常见问题(FAQ)部分，解答用户常见疑问
+- 添加与ThinkPHP各版本的兼容性说明
+
+### 改进
+
+- 优化README文档结构，增加更多实用徽章
+- 改进示例代码，添加更详细的注释和使用场景
+- 更新文档中的链接，确保所有链接正确且有效
+
 ## [1.0.5] - 2025-06-01
 
 ### 文档
@@ -54,6 +68,7 @@
 - 添加 `parseController()` 方法解析控制器路径
 - 添加示例文件和单元测试
 
+[1.0.6]: https://github.com/delay-no-more/thinkphp-mac-parser/releases/tag/v1.0.6
 [1.0.5]: https://github.com/delay-no-more/thinkphp-mac-parser/releases/tag/v1.0.5
 [1.0.4]: https://github.com/delay-no-more/thinkphp-mac-parser/releases/tag/v1.0.4
 [1.0.3]: https://github.com/delay-no-more/thinkphp-mac-parser/releases/tag/v1.0.3
