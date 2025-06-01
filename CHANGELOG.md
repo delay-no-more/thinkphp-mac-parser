@@ -4,6 +4,16 @@
 
 本项目遵循 [语义化版本控制](https://semver.org/lang/zh-CN/)。
 
+## [1.0.4] - 2025-06-01
+
+### 增强
+
+- 提高代码测试覆盖率从 87% 到 95%
+- 增加了特殊域名格式和边界情况的测试用例
+- 增加了对 extractRootDomain 方法的全面测试
+- 增加了对 matchSubdomain 方法的各种情况测试
+- 增加了对 rebuildUrl 方法的测试
+
 ## [1.0.3] - 2025-01-04
 
 ### 增强
@@ -36,6 +46,7 @@
 - 添加 `parseController()` 方法解析控制器路径
 - 添加示例文件和单元测试
 
+[1.0.4]: https://github.com/delay-no-more/thinkphp-mac-parser/releases/tag/v1.0.4
 [1.0.3]: https://github.com/delay-no-more/thinkphp-mac-parser/releases/tag/v1.0.3
 [1.0.2]: https://github.com/delay-no-more/thinkphp-mac-parser/releases/tag/v1.0.2
 [1.0.1]: https://github.com/delay-no-more/thinkphp-mac-parser/releases/tag/v1.0.1
