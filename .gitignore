@@ -1,0 +1,18 @@
+# Composer
+/vendor/
+composer.lock
+
+# IDE
+/.idea/
+/.vscode/
+.phpstorm.meta.php
+_ide_helper.php
+
+# 测试和覆盖率报告
+/coverage/
+clover.xml
+.phpunit.result.cache
+
+# 其他
+.DS_Store
+Thumbs.db

@@ -1,0 +1,21 @@
+{
+    "name": "delaynomore/thinkphp-mac-parser",
+    "description": "URL解析工具，支持模块、控制器、方法的解析",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DelayNomore",
+            "email": "delaynomore@github.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DelayNomore\\ThinkMac\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
