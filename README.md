@@ -1,11 +1,51 @@
-# ThinkPHP MAC Parser
+<p align="center">
+  <img src="logo.png" alt="ThinkPHP MAC Parser Logo" width="300"/>
+</p>
 
-[![PHP Tests](https://github.com/delay-no-more/thinkphp-mac-parser/actions/workflows/php-tests.yml/badge.svg)](https://github.com/delay-no-more/thinkphp-mac-parser/actions/workflows/php-tests.yml)
-[![codecov](https://codecov.io/gh/delay-no-more/thinkphp-mac-parser/branch/master/graph/badge.svg)](https://codecov.io/gh/delay-no-more/thinkphp-mac-parser)
+<h1 align="center">ThinkPHP MAC Parser</h1>
 
-ThinkPHP MAC (Module-Action-Controller) 解析器，提供增强的URL解析功能，支持模块、控制器、方法的解析。
+<p align="center">
+  <a href="https://github.com/delay-no-more/thinkphp-mac-parser/actions/workflows/php-tests.yml">
+    <img src="https://github.com/delay-no-more/thinkphp-mac-parser/actions/workflows/php-tests.yml/badge.svg" alt="PHP Tests">
+  </a>
+  <a href="https://codecov.io/gh/delay-no-more/thinkphp-mac-parser">
+    <img src="https://codecov.io/gh/delay-no-more/thinkphp-mac-parser/branch/master/graph/badge.svg" alt="Code Coverage">
+  </a>
+  <a href="https://packagist.org/packages/delaynomore/thinkphp-mac-parser">
+    <img src="https://img.shields.io/packagist/v/delaynomore/thinkphp-mac-parser" alt="Latest Version">
+  </a>
+  <a href="https://packagist.org/packages/delaynomore/thinkphp-mac-parser">
+    <img src="https://img.shields.io/packagist/dt/delaynomore/thinkphp-mac-parser" alt="Total Downloads">
+  </a>
+  <a href="https://packagist.org/packages/delaynomore/thinkphp-mac-parser">
+    <img src="https://img.shields.io/packagist/php-v/delaynomore/thinkphp-mac-parser" alt="PHP Version">
+  </a>
+  <a href="https://github.com/delay-no-more/thinkphp-mac-parser/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/delay-no-more/thinkphp-mac-parser" alt="License">
+  </a>
+</p>
 
-## 功能特点
+<p align="center">ThinkPHP MAC (Module-Action-Controller) 解析器，提供增强的URL解析功能，支持模块、控制器、方法的解析。</p>
+
+## 📑 目录
+
+- [功能特点](#功能特点)
+- [安装](#安装)
+- [快速开始](#快速开始)
+  - [基本用法](#基本用法)
+  - [自定义配置选项](#自定义配置选项)
+- [主要方法](#主要方法)
+  - [parseMac](#parsemacstring-url-array-options--array)
+  - [parseDomain](#parsedomainstring-url-array-rules--string-domainroot--null-array)
+  - [parseController](#parsecontrollerstring-url-array-options--array)
+- [返回结果说明](#返回结果说明)
+- [示例](#示例)
+- [贡献](#贡献)
+  - [参与方式](#参与方式)
+  - [开发环境设置](#开发环境设置)
+- [许可证](#许可证)
+
+## ✨ 功能特点
 
 - 解析URL获取模块、控制器、方法
 - 支持域名绑定模块（支持多种匹配模式）
@@ -13,7 +53,7 @@ ThinkPHP MAC (Module-Action-Controller) 解析器，提供增强的URL解析功�
 - 灵活的命名转换规则
 - 支持特殊域名后缀处理
 
-## 安装
+## 📦 安装
 
 通过 Composer 安装：
 
@@ -21,7 +61,7 @@ ThinkPHP MAC (Module-Action-Controller) 解析器，提供增强的URL解析功�
 composer require delaynomore/thinkphp-mac-parser
 ```
 
-## 快速开始
+## 🚀 快速开始
 
 ### 基本用法
 
@@ -58,7 +98,7 @@ $options = [
 $result = Parser::parseMac('https://api.example.com/user/list', $options);
 ```
 
-## 主要方法
+## 📝 主要方法
 
 ### parseMac(string $url, array $options = []): array
 
@@ -84,7 +124,7 @@ $result = Parser::parseMac('https://api.example.com/user/list', $options);
 
 解析控制器路径和操作方法
 
-## 返回结果说明
+## 📋 返回结果说明
 
 `parseMac()` 方法返回包含以下键的数组：
 
@@ -101,7 +141,7 @@ $result = Parser::parseMac('https://api.example.com/user/list', $options);
 - `nested`: 是否为多级控制器
 - `depth`: 控制器层级数量
 
-## 示例
+## 📚 示例
 
 可以查看 `examples` 目录下的示例文件，了解更多使用方法：
 
@@ -120,7 +160,7 @@ Example::demoParseDomain();
 Example::demoParseController();
 ```
 
-## 贡献
+## 🤝 贡献
 
 我们欢迎并感谢任何形式的贡献！如果您想为项目做出贡献，请查看 [贡献指南](CONTRIBUTING.md) 了解详细步骤。
 
@@ -146,8 +186,10 @@ composer install
 ./vendor/bin/phpunit
 ```
 
-## 许可证
+## 📄 许可证
 
 MIT
 
-最后更新: 2025-06-01
+---
+
+<p align="center">最后更新: 2025-06-01</p>
