@@ -368,8 +368,8 @@ class Parser
         // 根据convert选项处理名称转换
         $result = self::convertNames($controllerName, $actionPart, $options['convert']);
 
-        // 确保操作名是小写下划线格式（用于URL）
-        $actionSnake = strtolower($actionPart);
+        // 确保操作名的格式正确
+        $actionSnake = $options['convert'] ? strtolower($actionPart) : $actionPart;
 
         // 构建完整控制器路径（目录+控制器名）
         $fullPath = !empty($dirPath) ? $dirPath . '/' . $result['controllerSnake'] : $result['controllerSnake'];
@@ -617,13 +617,13 @@ class Parser
             // 转换为大驼峰格式的控制器类名
             $controllerClass = str_replace(' ', '', ucwords(str_replace('_', ' ', $controllerName)));
         } else {
-            // 不进行大小写转换
+            // 不进行大小写转换，完全保持原样
             $controllerSnake = $controllerName;
 
-            // 操作名保持原样
+            // 操作名完全保持原样
             $actionCamel = $actionName;
 
-            // 控制器类名保持原样
+            // 控制器类名完全保持原样
             $controllerClass = $controllerName;
         }
 

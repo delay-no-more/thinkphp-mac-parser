@@ -3,7 +3,6 @@
     "description": "URL解析工具，支持模块、控制器、方法的解析",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
     "keywords": [
         "thinkphp",
         "url",

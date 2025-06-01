@@ -83,27 +83,27 @@ class ParserTest extends TestCase
         ];
 
         // 测试完整域名匹配
-        $result = Parser::parseMac('http://admin.example.com/controller/action', [
+        $result = Parser::parseMac('http://admin.example.com/index/index', [
             'bind_domains' => $bindDomains
         ]);
         $this->assertEquals('admin', $result['module']);
-        $this->assertEquals('controller', $result['ctrl']);
-        $this->assertEquals('action', $result['action']);
+        $this->assertEquals('index', $result['ctrl']);
+        $this->assertEquals('index', $result['action']);
 
         // 测试前缀泛域名匹配
-        $result = Parser::parseMac('http://api.v2.example.com/controller/action', [
+        $result = Parser::parseMac('http://api.v2.example.com/index/index', [
             'bind_domains' => $bindDomains
         ]);
         $this->assertEquals('api', $result['module']);
 
         // 测试后缀泛域名匹配
-        $result = Parser::parseMac('http://profile.user.example.com/controller/action', [
+        $result = Parser::parseMac('http://profile.user.example.com/index/index', [
             'bind_domains' => $bindDomains
         ]);
         $this->assertEquals('user', $result['module']);
 
         // 测试通配符匹配
-        $result = Parser::parseMac('http://other.example.com/controller/action', [
+        $result = Parser::parseMac('http://other.example.com/index/index', [
             'bind_domains' => $bindDomains
         ]);
         $this->assertEquals('www', $result['module']);
@@ -150,13 +150,13 @@ class ParserTest extends TestCase
         $this->assertEquals('getInfo', $result['method']);
 
         // 测试convert=false
-        $result = Parser::parseMac('admin/UserProfile/GetInfo', [
+        $result = Parser::parseMac('admin/UserProfile/getInfo', [
             'convert' => false
         ]);
         $this->assertEquals('UserProfile', $result['ctrl']);
         $this->assertEquals('UserProfile', $result['class']);
-        $this->assertEquals('GetInfo', $result['action']);
-        $this->assertEquals('GetInfo', $result['method']);
+        $this->assertEquals('getInfo', $result['action']);
+        $this->assertEquals('getInfo', $result['method']);
     }
 
     /**
@@ -224,5 +224,41 @@ class ParserTest extends TestCase
         $this->assertEquals('UserCenter', $result['class']);
         $this->assertEquals('get_info', $result['action']);
         $this->assertEquals('getInfo', $result['method']);
+    }
+
+    /**
+     * 测试多级控制器与名称转换的混合模式
+     */
+    public function testMixedNestedAndConversion()
+    {
+        // 测试多级控制器 + 下划线名称 + convert=true (默认)
+        $result = Parser::parseMac('admin/api.user_center.account_manager/get_user_info');
+        $this->assertEquals('admin', $result['module']);
+        $this->assertEquals('account_manager', $result['ctrl']);
+        $this->assertEquals('AccountManager', $result['class']);
+        $this->assertEquals('get_user_info', $result['action']);
+        $this->assertEquals('getUserInfo', $result['method']);
+        $this->assertEquals('api/user_center', $result['dir']);
+        $this->assertEquals('api/user_center/account_manager', $result['path']);
+        $this->assertEquals('admin/api/user_center/account_manager/get_user_info', $result['fullpath']);
+        $this->assertEquals('admin/api.user_center.account_manager/get_user_info', $result['url']);
+        $this->assertTrue($result['nested']);
+        $this->assertEquals(3, $result['depth']);
+
+        // 测试多级控制器 + 混合大小写 + convert=false
+        $result = Parser::parseMac('admin/api.userCenter.AccountManager/getUserInfo', [
+            'convert' => false
+        ]);
+        $this->assertEquals('admin', $result['module']);
+        $this->assertEquals('AccountManager', $result['ctrl']);
+        $this->assertEquals('AccountManager', $result['class']);
+        $this->assertEquals('getUserInfo', $result['action']);
+        $this->assertEquals('getUserInfo', $result['method']);
+        $this->assertEquals('api/usercenter', $result['dir']);
+        $this->assertEquals('api/usercenter/AccountManager', $result['path']);
+        $this->assertEquals('admin/api/usercenter/AccountManager/getUserInfo', $result['fullpath']);
+        $this->assertEquals('admin/api.usercenter.AccountManager/getUserInfo', $result['url']);
+        $this->assertTrue($result['nested']);
+        $this->assertEquals(3, $result['depth']);
     }
 }
