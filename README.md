@@ -21,7 +21,7 @@
     <img src="https://img.shields.io/packagist/php-v/delaynomore/thinkphp-mac-parser" alt="PHP Version">
   </a>
   <a href="https://github.com/delay-no-more/thinkphp-mac-parser/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/delay-no-more/thinkphp-mac-parser" alt="License">
+    <img src="https://img.shields.io/badge/license-MIT-brightgreen" alt="License">
   </a>
 </p>
 
