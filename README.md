@@ -120,8 +120,34 @@ Example::demoParseDomain();
 Example::demoParseController();
 ```
 
+## 贡献
+
+我们欢迎并感谢任何形式的贡献！如果您想为项目做出贡献，请查看 [贡献指南](CONTRIBUTING.md) 了解详细步骤。
+
+参与本项目即表示您同意遵守我们的 [行为准则](CODE_OF_CONDUCT.md)。
+
+### 参与方式
+
+- 提交 Bug 报告
+- 提出新功能建议
+- 改进文档
+- 提交代码修复或新功能
+
+### 开发环境设置
+
+```bash
+# 克隆仓库
+git clone https://github.com/delay-no-more/thinkphp-mac-parser.git
+
+# 安装依赖
+composer install
+
+# 运行测试
+./vendor/bin/phpunit
+```
+
 ## 许可证
 
 MIT
 
-最后更新: 2023-07-24
+最后更新: 2025-06-01
