@@ -10,6 +10,7 @@ _ide_helper.php
 
 # 测试和覆盖率报告
 /coverage/
+/build/
 clover.xml
 .phpunit.result.cache
 
