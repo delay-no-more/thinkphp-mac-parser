@@ -1,6 +1,7 @@
 # ThinkPHP MAC Parser
 
 [![PHP Tests](https://github.com/delay-no-more/thinkphp-mac-parser/actions/workflows/php-tests.yml/badge.svg)](https://github.com/delay-no-more/thinkphp-mac-parser/actions/workflows/php-tests.yml)
+[![codecov](https://codecov.io/gh/delay-no-more/thinkphp-mac-parser/branch/master/graph/badge.svg)](https://codecov.io/gh/delay-no-more/thinkphp-mac-parser)
 
 ThinkPHP MAC (Module-Action-Controller) 解析器，提供增强的URL解析功能，支持模块、控制器、方法的解析。
 
